@@ -7,16 +7,16 @@ services:
     ports:
       - "8083:8080"
     networks:
-      - employee-mysql
+      - company-mysql
     depends_on:
       - mysql
 
   mysql:
     image: mysql
     networks:
-      - employee-mysql
+      - company-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=companyproject
 networks:
-  employee-mysql:
+  company-mysql:
